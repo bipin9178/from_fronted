@@ -12,7 +12,7 @@ import ReSubmitList from "./ReSubmitList";
 import Pagination from "../pages/Paggnation";
 import { toast } from "react-toastify";
 import api from "../middleware/api";
-import { formatDate } from "../../../backend/utils/Dateforment.js";
+import { formatDate } from '../utils/Dateforment';
 
 export default function SubmissionList() {
   const dispatch = useDispatch();
