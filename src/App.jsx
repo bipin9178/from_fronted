@@ -20,22 +20,22 @@ export default function App() {
   useEffect(() => {
     dispatch(loadUserFromStorage());
   }, [dispatch]);
-const frontendUrl = 'https://from-fronted-k8aq-6mzdph7s7-bipins-projects-0c3e442c.vercel.app';
+
   return (
     <>
       <UserNavbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path={`${frontendUrl}/login`} element={<LoginForm />} />
-        <Route path={`${frontendUrl}/register`} element={<Register />} />
-        <Route path={`${frontendUrl}/change-password`} element={<ChangePassword />} />
-        <Route path={`${frontendUrl}/profile/:id`} element={<Profile />} />
-        <Route path={`${frontendUrl}/forget-password`} element={<ForgotPassword />} />
-        <Route path={`${frontendUrl}/reset-password/:token`} element={<ResetPassword />} />
-        <Route path={`${frontendUrl}/all-submissions`} element={<Card />} />
-        <Route path={`${frontendUrl}/submit`} element={<SubmissionForm />} />
-        <Route path={`${frontendUrl}/my-submissions`} element={<SubmissionList />} />
+        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/login" element={<LoginForm />} />
+        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/register" element={<Register />} />
+        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/change-password"  element={ <ChangePassword /> }/>
+        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/profile/:id" element={<Profile />} />
+        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/forget-password" element={<ForgotPassword />} />
+        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/reset-password/:token" element={<ResetPassword />} />
+        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/all-submissions" element={<Card />} />
+        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/submit" element={<SubmissionForm />} />
+        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/my-submissions" element={<SubmissionList />} />
       </Routes>
     </>
   );
