@@ -29,7 +29,7 @@ export default function App() {
       <UserNavbar />
 
       <Routes>
-        <Route path={`${frontendUrl}/`} element={<Home />} />
+        <Route path={`${frontendUrl}`} element={<Home />} />
         <Route path={`${frontendUrl}/login`} element={<LoginForm />} />
         <Route path={`${frontendUrl}/register`} element={<Register />} />
         <Route path={`${frontendUrl}/change-password`} element={<ChangePassword />} />
