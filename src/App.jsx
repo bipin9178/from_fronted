@@ -14,6 +14,7 @@ import Card from "./Form/Card.jsx";
 import ChangePassword from "./pages/ChangePassword.jsx";
 import ForgotPassword from "./features/forget.jsx";
 import ResetPassword from "./features/resetPassword.jsx";
+
 export default function App() {
   const dispatch = useDispatch();
 
@@ -21,21 +22,23 @@ export default function App() {
     dispatch(loadUserFromStorage());
   }, [dispatch]);
 
+  const frontendUrl = "https://from-fronted-k8aq.vercel.app"; // Optional prefix, e.g., "/app"
+
   return (
     <>
       <UserNavbar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/login" element={<LoginForm />} />
-        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/register" element={<Register />} />
-        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/change-password"  element={ <ChangePassword /> }/>
-        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/profile/:id" element={<Profile />} />
-        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/forget-password" element={<ForgotPassword />} />
-        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/reset-password/:token" element={<ResetPassword />} />
-        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/all-submissions" element={<Card />} />
-        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/submit" element={<SubmissionForm />} />
-        <Route path="https://from-fronted-k8aq-git-main-bipins-projects-0c3e442c.vercel.app/my-submissions" element={<SubmissionList />} />
+        <Route path={`${frontendUrl}/`} element={<Home />} />
+        <Route path={`${frontendUrl}/login`} element={<LoginForm />} />
+        <Route path={`${frontendUrl}/register`} element={<Register />} />
+        <Route path={`${frontendUrl}/change-password`} element={<ChangePassword />} />
+        <Route path={`${frontendUrl}/profile/:id`} element={<Profile />} />
+        <Route path={`${frontendUrl}/forget-password`} element={<ForgotPassword />} />
+        <Route path={`${frontendUrl}/reset-password/:token`} element={<ResetPassword />} />
+        <Route path={`${frontendUrl}/all-submissions`} element={<Card />} />
+        <Route path={`${frontendUrl}/submit`} element={<SubmissionForm />} />
+        <Route path={`${frontendUrl}/my-submissions`} element={<SubmissionList />} />
       </Routes>
     </>
   );
