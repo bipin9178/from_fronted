@@ -14,7 +14,6 @@ import Card from "./Form/Card.jsx";
 import ChangePassword from "./pages/ChangePassword.jsx";
 import ForgotPassword from "./features/forget.jsx";
 import ResetPassword from "./features/resetPassword.jsx";
-
 export default function App() {
   const dispatch = useDispatch();
 
@@ -22,23 +21,21 @@ export default function App() {
     dispatch(loadUserFromStorage());
   }, [dispatch]);
 
-  const frontendUrl = "https://from-fronted-k8aq.vercel.app"; // Optional prefix, e.g., "/app"
-
   return (
     <>
       <UserNavbar />
 
       <Routes>
-        <Route path={`${frontendUrl}`} element={<Home />} />
-        <Route path={`${frontendUrl}/login`} element={<LoginForm />} />
-        <Route path={`${frontendUrl}/register`} element={<Register />} />
-        <Route path={`${frontendUrl}/change-password`} element={<ChangePassword />} />
-        <Route path={`${frontendUrl}/profile/:id`} element={<Profile />} />
-        <Route path={`${frontendUrl}/forget-password`} element={<ForgotPassword />} />
-        <Route path={`${frontendUrl}/reset-password/:token`} element={<ResetPassword />} />
-        <Route path="https://from-fronted-k8aq-61gj9woex-bipins-projects-0c3e442c.vercel.app/all-submissions" element={<Card />} />
-        <Route path={`${frontendUrl}/submit`} element={<SubmissionForm />} />
-        <Route path={`${frontendUrl}/my-submissions`} element={<SubmissionList />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/change-password"  element={ <ChangePassword /> }/>
+        <Route path="/profile/:id" element={<Profile />} />
+        <Route path="/forget-password" element={<ForgotPassword />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
+        <Route path="/all-submissions" element={<Card />} />
+        <Route path="/submit" element={<SubmissionForm />} />
+        <Route path="/my-submissions" element={<SubmissionList />} />
       </Routes>
     </>
   );
