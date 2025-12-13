@@ -26,9 +26,9 @@ export default function App() {
       <UserNavbar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="https://from-fronted-k8aq-6mzdph7s7-bipins-projects-0c3e442c.vercel.app" element={<Home />} />
+        <Route path="https://from-fronted-k8aq-6mzdph7s7-bipins-projects-0c3e442c.vercel.app/login" element={<LoginForm />} />
+        <Route path="https://from-fronted-k8aq-6mzdph7s7-bipins-projects-0c3e442c.vercel.app/register" element={<Register />} />
         <Route path="/change-password"  element={ <ChangePassword /> }/>
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/forget-password" element={<ForgotPassword />} />
