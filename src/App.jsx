@@ -36,7 +36,7 @@ export default function App() {
         <Route path={`${frontendUrl}/profile/:id`} element={<Profile />} />
         <Route path={`${frontendUrl}/forget-password`} element={<ForgotPassword />} />
         <Route path={`${frontendUrl}/reset-password/:token`} element={<ResetPassword />} />
-        <Route path={`${frontendUrl}/all-submissions`} element={<Card />} />
+        <Route path="https://from-fronted-k8aq-61gj9woex-bipins-projects-0c3e442c.vercel.app/all-submissions" element={<Card />} />
         <Route path={`${frontendUrl}/submit`} element={<SubmissionForm />} />
         <Route path={`${frontendUrl}/my-submissions`} element={<SubmissionList />} />
       </Routes>
