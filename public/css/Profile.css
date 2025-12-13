@@ -1,0 +1,140 @@
+
+/* General layout */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f6fa;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding: 10px;
+}
+
+.profile-card {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-title {
+  color: #ff66b6;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* Profile avatar */
+.profile-avatar-container {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 25px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  background-color: #fff;
+}
+
+/* Profile info */
+.profile-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.profile-info-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  background-color: #f1f3f6;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.profile-info-row:hover {
+  background-color: #e0e3f8;
+}
+
+.profile-info-icon {
+  color: #ff66b6;
+  font-size: 18px;
+}
+
+.profile-info-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Buttons */
+.profile-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profile-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 0;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: #ff66b6;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Spinner container */
+.spinner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 30px 20px;
+  }
+
+  .profile-title {
+    font-size: 22px;
+  }
+
+  .profile-avatar-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-info-text {
+    font-size: 14px;
+  }
+
+  .profile-btn {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}

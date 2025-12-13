@@ -1,0 +1,113 @@
+
+.modern-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid #f1f5f9;
+}
+
+.modern-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+}
+
+.file-icon-wrapper {
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Custom File Icons */
+.icon-pdf { color: #ff4e4e; font-size: 58px; }
+.icon-word { color: #297bff; font-size: 58px; }
+.icon-default { color: #6c757d; font-size: 58px; }
+
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-title {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+
+
+.file-user,
+.file-date,
+.file-status {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #475569;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-user strong {
+  color: #0f172a;
+}
+
+
+.action-buttons {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-modern {
+  padding: 9px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+/* Button Colors */
+.btn-modern.preview {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.btn-modern.download {
+  background: #4f46e5;
+  color: white;
+}
+
+/* Hover Effects */
+.btn-modern:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 576px) {
+  .file-title {
+    font-size: 18px;
+  }
+
+  .btn-modern {
+    justify-content: center;
+    width: 100%;
+  }
+}
