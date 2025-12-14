@@ -72,7 +72,7 @@ const FileDetailsCard = () => {
     if (["jpg", "jpeg", "png"].includes(ext)) {
       return (
         <img
-          src={`http://localhost:8800/${fileUrl.replace("\\", "/")}`}
+          src={`https://from-backend-1-8h27.onrender.com/${fileUrl.replace("\\", "/")}`}
           style={{ width: 50, height: 50, objectFit: "cover", borderRadius: 6 }}
         />
       );
@@ -89,7 +89,7 @@ const FileDetailsCard = () => {
   };
 
   const handlePreview1 = async (file) => {
-    const fileUrl = `http://localhost:8800/${file.fileUrl.replace("\\", "/")}`;
+    const fileUrl = `https://from-backend-1-8h27.onrender.com/${file.fileUrl.replace("\\", "/")}`;
     const ext = file.fileUrl.split(".").pop().toLowerCase();
 
     if (["jpg", "jpeg", "png", "pdf"].includes(ext)) {
