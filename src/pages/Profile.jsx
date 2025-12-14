@@ -60,7 +60,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="profile-container">
+    <div className="profile-container mt-5 py-5">
       <div className="profile-card">
         <h2 className="profile-title">Profile</h2>
 
