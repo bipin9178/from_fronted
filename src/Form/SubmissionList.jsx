@@ -122,7 +122,7 @@ export default function SubmissionList() {
   // Preview file
   const handlePreview = (fileUrl) => {
     if (!fileUrl) return toast.error("No file to preview");
-    const fixedUrl = `http://localhost:8800/${fileUrl.replace(/\\/g, "/")}`;
+    const fixedUrl = `https://from-backend-1-8h27.onrender.com/api/${fileUrl.replace(/\\/g, "/")}`;
     window.open(fixedUrl, "_blank");
   };
 
