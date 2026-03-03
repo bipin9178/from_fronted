@@ -120,12 +120,24 @@ export default function SubmissionList() {
   };
 
   // Preview file
-  const handlePreview = (fileUrl) => {
-    if (!fileUrl) return toast.error("No file to preview");
-    const fixedUrl = `https://from-backend-1-8h27.onrender.com/${fileUrl.replace(/\\/g, "/")}`;
-    window.open(fixedUrl, "_blank");
-  };
+const handlePreview = (fileUrl) => {
+  if (!fileUrl) return toast.error("No file to preview");
 
+  let cleanPath = fileUrl.replace(/\\/g, "/");
+
+  // If full URL already
+  if (cleanPath.startsWith("http")) {
+    window.open(cleanPath, "_blank");
+    return;
+  }
+
+  // Remove /api/ if accidentally saved
+  cleanPath = cleanPath.replace(/^api\//, "");
+
+  const fixedUrl = `https://from-backend-1-8h27.onrender.com/${cleanPath}`;
+
+  window.open(fixedUrl, "_blank");
+};
   // Delete modal
   const openDeleteModal = (id) => {
     setDeleteId(id);
